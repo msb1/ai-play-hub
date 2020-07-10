@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+
+# Init connection between React JS and Play
+GET     /                           controllers.HomeController.init
+
+# Login, Register, Logout (with JWT Authorization)
+POST    /login                      controllers.HomeController.login
+POST    /signout                    controllers.HomeController.signout
+POST    /register                   controllers.HomeController.register
+
+# Kafka Broker config
+GET     /broker                     controllers.HomeController.getBrokerConfig
+POST    /broker                     controllers.HomeController.setBrokerConfig
+
+# Websocket handshake
+GET     /ws                         controllers.HomeController.ws
+
+
